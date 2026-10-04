@@ -24,4 +24,8 @@ func main() {
 	profileName := "bankUserName"
 	fmt.Println(strings.ToUpper(profileName))
 	fmt.Println(strings.ToLower(profileName))
+
+	accountDetail := "AccountID-123456;Balance-1000"
+	details := strings.Split(accountDetail, ";")
+	fmt.Println(details)
 }
