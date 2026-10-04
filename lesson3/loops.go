@@ -18,4 +18,7 @@ func main() {
 		"two":   "second",
 		"three": "third",
 	}
+	for k, v := range map {
+		fmt.Printf("Key: %s, Value: %s\n", k, v)
+	}
 }
