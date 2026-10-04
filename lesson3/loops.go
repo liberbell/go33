@@ -12,4 +12,10 @@ func main() {
 	for i, v := range str {
 		fmt.Printf("Character at index %d is: %c\n", i, v)
 	}
+
+	m := map[string]string{
+		"one":   "first",
+		"two":   "second",
+		"three": "third",
+	}
 }
