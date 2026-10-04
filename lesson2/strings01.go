@@ -9,7 +9,7 @@ func main() {
 	fmt.Println(message2)
 
 	name := "Programmer"
-	fmt.Println("%c\n", name[0])
-	fmt.Println("%c\n", name[3])
-	fmt.Println("%c\n", name[8])
+	fmt.Printf("%c\n", name[0])
+	fmt.Printf("%c\n", name[3])
+	fmt.Printf("%c\n", name[8])
 }
