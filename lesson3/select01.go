@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	bankingOperations := make(chan stirng)
+	bankingOperations := make(chan string)
 
 	go func() {
 		time.Sleep(2 * time.Second)
