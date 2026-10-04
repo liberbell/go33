@@ -6,6 +6,6 @@ func main() {
 	str := "Hello"
 
 	for i := 0; i < len(str); i++ {
-		fmt.Printf("Character at index %d")
+		fmt.Printf("Character at index %d is:", i)
 	}
 }
