@@ -9,7 +9,12 @@ func main() {
 		fmt.Println(num, "is even")
 	}
 
-	if X == 200 {
+	X := 100
+	if X == 100 {
 		fmt.Println("Japan")
+	} else if X == 200 {
+		fmt.Println("China")
+	} else {
+		fmt.Println("Germany")
 	}
 }
