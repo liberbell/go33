@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	bankingOperations := make(chan stirng)
@@ -9,4 +12,9 @@ func main() {
 		time.Sleep(2 * time.Second)
 		bankingOperations <- "Deposit complete"
 	}()
+
+	select {
+	case msg := <-bankingOperations:
+		fmt.Println(msg)
+	}
 }
