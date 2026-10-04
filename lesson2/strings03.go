@@ -16,4 +16,12 @@ func main() {
 	email := "apple@bank.com"
 	containBank := strings.Contains(email, "banks")
 	fmt.Println(containBank)
+
+	oldEmail := "apple@citibank.com"
+	newEmail := strings.Replace(oldEmail, "citi", "chase", 1)
+	fmt.Println(newEmail)
+
+	profileName := "bankUserName"
+	fmt.Println(strings.ToUpper(profileName))
+	fmt.Println(strings.ToLower(profileName))
 }
