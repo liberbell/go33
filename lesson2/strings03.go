@@ -12,4 +12,8 @@ func main() {
 	fmt.Println(strings.Compare(string1, string2))
 	fmt.Println(strings.Compare(string1, string3))
 	fmt.Println(strings.Compare(string2, string3))
+
+	email := "apple@bank.com"
+	containBank := strings.Contains(email, "banks")
+	fmt.Println(containBank)
 }
