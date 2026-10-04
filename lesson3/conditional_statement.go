@@ -8,4 +8,8 @@ func main() {
 	if num%2 == 0 {
 		fmt.Println(num, "is even")
 	}
+
+	if X == 200 {
+		fmt.Println("Japan")
+	}
 }
