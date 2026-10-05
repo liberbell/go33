@@ -11,6 +11,8 @@ func main() {
 		fallthrough
 	case "Inactive":
 		fmt.Println("Your account is inactive.")
+	default:
+		fmt.Println("Your account status is unknown")
 	}
 
 }
