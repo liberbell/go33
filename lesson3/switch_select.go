@@ -9,6 +9,8 @@ func main() {
 	case "Active":
 		fmt.Println("Your account is active.")
 		fallthrough
+	case "Inactive":
+		fmt.Println("Your account is inactive.")
 	}
 
 }
