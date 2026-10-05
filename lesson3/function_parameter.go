@@ -18,5 +18,5 @@ func main() {
 	fmt.Printf("The original value is %d and the square value is %d\n", original, result)
 
 	square2(&original)
-	fmt.Println("")
+	fmt.Println("The original value after the square2 operation is %d\n", original)
 }
