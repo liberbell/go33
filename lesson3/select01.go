@@ -16,5 +16,7 @@ func main() {
 	select {
 	case msg := <-bankingOperations:
 		fmt.Println(msg)
+	case <-time.After(3 * time.Second):
+		fmt.Println("Operation timeout")
 	}
 }
