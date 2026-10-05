@@ -9,7 +9,7 @@ func main() {
 	bankingOperations := make(chan string)
 
 	go func() {
-		time.Sleep(2 * time.Second)
+		time.Sleep(4 * time.Second)
 		bankingOperations <- "Deposit complete"
 	}()
 
