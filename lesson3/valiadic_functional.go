@@ -12,3 +12,8 @@ func BookFlights(flights ...Flight) int {
 	}
 	return totalCost
 }
+
+func main() {
+	flight1 := Flight{price: 100}
+	flight2 := Flight{price: 200}
+}
