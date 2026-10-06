@@ -1,6 +1,9 @@
 package main
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 func percentChange(oldPrice float64, newPrice float64) (float64, error) {
 
@@ -9,4 +12,15 @@ func percentChange(oldPrice float64, newPrice float64) (float64, error) {
 	}
 
 	return ((newPrice - oldPrice) / oldPrice) * 100, nil
+}
+
+func main() {
+	change, err := percentChange(100.0, 120.0)
+
+	if err != nil {
+		fmt.Println("An error occurred:", err.Error())
+		return
+	}
+
+	fmt.Println("The percentage change is:", change)
 }
