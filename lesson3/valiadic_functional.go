@@ -24,4 +24,5 @@ func main() {
 	flight3 := Flight{price: 100}
 	flight4 := Flight{price: 250}
 	flight5 := Flight{price: 300}
+	fmt.Println(BookFlights(flight1, flight2, flight3, flight4, flight5))
 }
