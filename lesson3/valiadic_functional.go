@@ -10,4 +10,5 @@ func BookFlights(flights ...Flight) int {
 	for _, flight := range flights {
 		totalCost += flight.price
 	}
+	return totalCost
 }
