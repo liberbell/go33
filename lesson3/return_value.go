@@ -15,7 +15,7 @@ func percentChange(oldPrice float64, newPrice float64) (float64, error) {
 }
 
 func main() {
-	change, err := percentChange(100.0, 120.0)
+	change, err := percentChange(10000.0, 120.0)
 
 	if err != nil {
 		fmt.Println("An error occurred:", err.Error())
