@@ -21,7 +21,7 @@ func divide(a int, b int) (quo int, rem int) {
 	return
 }
 
-func great(name string) string {
+func greet(name string) string {
 	return "Hello, " + name + "!"
 }
 
@@ -41,4 +41,8 @@ func main() {
 
 	quotient, remainder := divide(10, 3)
 	fmt.Printf("The Quotient is %d, and the Rreemaindr is %d\n", quotient, remainder)
+
+	fmt.Println(greet("James"))
+	a, b := 5, 10
+	a, b = swap(a, b)
 }
