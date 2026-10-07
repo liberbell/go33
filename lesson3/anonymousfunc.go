@@ -11,4 +11,8 @@ func main() {
 	func(firstName, lastName string) {
 		fmt.Printf("User profile: %s %s\n", firstName, lastName)
 	}("FirstName", "LastName")
+
+	displayBalance := func(accountHolder, string, balance float64) {
+
+	}
 }
