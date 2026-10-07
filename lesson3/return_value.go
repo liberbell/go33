@@ -25,6 +25,10 @@ func great(name string) string {
 	return "Hello, " + name + "!"
 }
 
+func swap(x, y int) (int, int) {
+	return y, x
+}
+
 func main() {
 	change, err := percentChange(10000.0, 120.0)
 
