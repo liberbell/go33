@@ -21,6 +21,10 @@ func divide(a int, b int) (quo int, rem int) {
 	return
 }
 
+func great(name string) string {
+	return "Hello, " + name + "!"
+}
+
 func main() {
 	change, err := percentChange(10000.0, 120.0)
 
@@ -32,5 +36,5 @@ func main() {
 	fmt.Println("The percentage change is:", change)
 
 	quotient, remainder := divide(10, 3)
-	fmt.Printf("The Quotient is %d, and the Remaindr is %d\n", quotient, remainder)
+	fmt.Printf("The Quotient is %d, and the Rreemaindr is %d\n", quotient, remainder)
 }
