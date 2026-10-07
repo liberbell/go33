@@ -45,4 +45,6 @@ func main() {
 	fmt.Println(greet("James"))
 	a, b := 5, 10
 	a, b = swap(a, b)
+
+	fmt.Printf("Swapped value is a = %d, b = %d\n", a, b)
 }
