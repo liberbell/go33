@@ -30,4 +30,7 @@ func main() {
 	}
 
 	fmt.Println("The percentage change is:", change)
+
+	quotient, remainder := divide(10, 3)
+	fmt.Printf("The Quotient is %d, and the Remaindr is %d\n", quotient, remainder)
 }
