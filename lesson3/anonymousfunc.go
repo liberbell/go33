@@ -12,7 +12,9 @@ func main() {
 		fmt.Printf("User profile: %s %s\n", firstName, lastName)
 	}("FirstName", "LastName")
 
-	displayBalance := func(accountHolder, string, balance float64) {
-
+	displayBalance := func(accountHolder string, balance float64) {
+		fmt.Printf("%s's account balance: $%.2f\n", accountHolder, balance)
 	}
+
+	displayBalance("James Bond", 10000.50)
 }
