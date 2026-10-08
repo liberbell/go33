@@ -10,4 +10,9 @@ func main() {
 	func(firstName, lastName, email string) {
 		fmt.Printf("User: %s %s, Email: %s", firstName, lastName, email)
 	}("James", "Bond", "james@bond.com")
+
+	deposit := func(amount float64) float64 {
+		fmt.Printf("Deposited: $%.2f\n", amount)
+		return amount
+	}
 }
