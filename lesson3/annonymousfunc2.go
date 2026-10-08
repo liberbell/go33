@@ -8,7 +8,7 @@ func processTransaction(amount float64, operation func(float64) float64) float64
 
 func main() {
 	func(firstName, lastName, email string) {
-		fmt.Printf("User: %s %s, Email: %s", firstName, lastName, email)
+		fmt.Printf("User: %s %s, Email: %s\n", firstName, lastName, email)
 	}("James", "Bond", "james@bond.com")
 
 	deposit := func(amount float64) float64 {
