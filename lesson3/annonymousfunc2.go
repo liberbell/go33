@@ -8,8 +8,10 @@ func processTransaction(amount float64, operation func(float64) float64) float64
 
 func updateUserProfile() func(string) string {
 	profile := "James Bond's profile"
-} {
-	
+	return func(update string) string {
+		profile = update
+		return profile
+	}
 }
 
 func main() {
