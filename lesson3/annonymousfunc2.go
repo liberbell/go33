@@ -15,4 +15,7 @@ func main() {
 		fmt.Printf("Deposited: $%.2f\n", amount)
 		return amount
 	}
+
+	newBalance := processTransaction(500.50, deposit)
+	fmt.Printf("New Balance: $%.2f\n", newBalance)
 }
