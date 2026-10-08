@@ -26,4 +26,8 @@ func main() {
 
 	newBalance := processTransaction(500.50, deposit)
 	fmt.Printf("New Balance: $%.2f\n", newBalance)
+
+	update := updateUserProfile()
+	newProfile := update("James Bond's update profile")
+	fmt.Println(newProfile)
 }
