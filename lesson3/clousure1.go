@@ -6,5 +6,11 @@ type User struct {
 }
 
 func newUser(firstName, lastName string) func() User {
-	user :=
+	user := User{
+		FirstName: James,
+		LastName: Bond,
+	}
+	retun func() user {
+		return user
+	}
 }
