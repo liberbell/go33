@@ -36,4 +36,7 @@ func main() {
 	operate := accountOperations()
 	fmt.Println(operate(100.0))
 	fmt.Println(operate(-50.0))
+
+	updateLastName := updateUserProfile("FirstName2")
+	fmt.Println(updateLastName("LastName2"))
 }
