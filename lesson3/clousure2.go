@@ -34,6 +34,11 @@ func updateUserProfile(firstName string) func(string) string {
 	}
 }
 
+func NewBankServices() *BankService {
+	s := &BankService{}
+	s.transfer = func(from, to float64) float64 {}
+}
+
 func main() {
 	deposit := newAccount(100.50)
 	fmt.Println(deposit(80.0))
