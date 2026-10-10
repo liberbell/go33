@@ -26,4 +26,8 @@ func main() {
 	deposit := newAccount(100.50)
 	fmt.Println(deposit(80.0))
 	fmt.Println(deposit(1100))
+
+	operate := accountOperations()
+	fmt.Println(operate(100.0))
+	fmt.Println(operate(-50.0))
 }
