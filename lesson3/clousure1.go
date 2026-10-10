@@ -2,15 +2,15 @@ package main
 
 type User struct {
 	FirstName string
-	LastName string
+	LastName  string
 }
 
 func newUser(firstName, lastName string) func() User {
 	user := User{
-		FirstName: James,
-		LastName: Bond,
+		FirstName: firstName,
+		LastName:  lastName,
 	}
-	retun func() user {
+	return func() User {
 		return user
 	}
 }
