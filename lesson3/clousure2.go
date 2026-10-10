@@ -1,9 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type BankAccount struct {
 	Balance float64
+}
+
+type BankService struct {
+	transfer func(float64, float64) float64
 }
 
 func newAccount(initialBalance float64) func(float64) float64 {
