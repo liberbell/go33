@@ -14,6 +14,14 @@ func newAccount(initialBalance float64) func(float64) float64 {
 	}
 }
 
+func accountOperations() func(float64) float64 {
+	balance := 0.0
+	return func(amount float64) float64 {
+		balance += amount
+		return balance
+	}
+}
+
 func main() {
 	deposit := newAccount(100.50)
 	fmt.Println(deposit(80.0))
