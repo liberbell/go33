@@ -22,6 +22,12 @@ func accountOperations() func(float64) float64 {
 	}
 }
 
+func updateUserProfile(firstName string) func(string) string {
+	return func(newLastName string) string {
+		return "Updated Last Name for " + firstName + ": " + newLastName
+	}
+}
+
 func main() {
 	deposit := newAccount(100.50)
 	fmt.Println(deposit(80.0))
