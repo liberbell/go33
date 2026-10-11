@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 type User struct {
 	Name string
@@ -16,4 +19,9 @@ func (u User) UpperName() {
 
 func (u *User) setName(name string) {
 	u.Name = name
+}
+
+func main() {
+	user := User{Name: "James"}
+	fmt.Println(user.Greet())
 }
