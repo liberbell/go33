@@ -42,6 +42,10 @@ func NewBankServices() *BankService {
 	return s
 }
 
+func (s *BankService) Transfer(from, to float64) float64 {
+	return s.fransfer(from, to)
+}
+
 func main() {
 	deposit := newAccount(100.50)
 	fmt.Println(deposit(80.0))
@@ -53,4 +57,7 @@ func main() {
 
 	updateLastName := updateUserProfile("FirstName2")
 	fmt.Println(updateLastName("LastName2"))
+
+	service := NewBankServices()
+	fmt.Println(service.transfer(1000.0, 200.0))
 }
