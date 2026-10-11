@@ -10,9 +10,10 @@ func main() {
 	userProfiles := [...]struct {
 		Name  string
 		Email string
-	}(
+	}{
 		{"FirstName1 LastName1", "firstname1.lastname1@example.com"},
 		{"FirstName2 LastName2", "firstname2.lastname2@example.com"},
-	)
+	}
+	fmt.Println(userProfiles)
 
 }
