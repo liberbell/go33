@@ -43,7 +43,7 @@ func NewBankServices() *BankService {
 }
 
 func (s *BankService) Transfer(from, to float64) float64 {
-	return s.fransfer(from, to)
+	return s.transfer(from, to)
 }
 
 func main() {
