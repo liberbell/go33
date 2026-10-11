@@ -10,7 +10,7 @@ type User struct {
 }
 
 func (u User) Greet() string {
-	return "Hello" + u.Name
+	return "Hello " + u.Name
 }
 
 func (u User) UpperName() {
@@ -24,4 +24,7 @@ func (u *User) setName(name string) {
 func main() {
 	user := User{Name: "James"}
 	fmt.Println(user.Greet())
+
+	user.UpperName()
+	fmt.Println(user.Name)
 }
