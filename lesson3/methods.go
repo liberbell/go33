@@ -27,4 +27,8 @@ func main() {
 
 	user.UpperName()
 	fmt.Println(user.Name)
+
+	userPointer := &user
+	userPointer.setName("money")
+	fmt.Println(user.Name)
 }
