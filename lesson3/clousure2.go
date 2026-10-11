@@ -36,7 +36,10 @@ func updateUserProfile(firstName string) func(string) string {
 
 func NewBankServices() *BankService {
 	s := &BankService{}
-	s.transfer = func(from, to float64) float64 {}
+	s.transfer = func(from, to float64) float64 {
+		return from - to
+	}
+	return s
 }
 
 func main() {
