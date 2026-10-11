@@ -13,3 +13,7 @@ func (u User) Greet() string {
 func (u User) UpperName() {
 	u.Name = strings.ToUpper(u.Name)
 }
+
+func (u *User) setName(name string) {
+	u.Name = name
+}
