@@ -26,4 +26,8 @@ func main() {
 	stockPriceSlices := make([]float64, 3, 5)
 	fmt.Println("Slice with make - Length", len(stockPriceSlices))
 	fmt.Println("Slice with make - Capacity", cap(stockPriceSlices))
+
+	usersInternal := []string{"Name_1", "Name_2"}
+	sliceInternals := (*Slice)(unsafe.Pointer(&usersInternal))
+	fmt.Println("Slice Internals:", sliceInternals)
 }
