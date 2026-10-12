@@ -16,4 +16,7 @@ func main() {
 	}
 	fmt.Println(userProfiles)
 
+	stockSymbols := [...]string{"APPL", "GOOGL", "AMZN"}
+	fmt.Println(stockSymbols)
+
 }
