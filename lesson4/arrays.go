@@ -33,4 +33,7 @@ func main() {
 	stockPrices1[2] = 72.1
 	fmt.Println(stockPrices1)
 
+	users := [3]string{"James", "money", "Q"}
+	totalUsers := len(users)
+	fmt.Println("Total number of users:", totalUsers)
 }
