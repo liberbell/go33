@@ -40,14 +40,14 @@ func main() {
 	totalUsers := len(users)
 	fmt.Println("Total number of users:", totalUsers)
 
-	userProfiles := [2][2]struct {
-		Name string
+	userProfiles1 := [2][2]struct {
+		Name  string
 		Email string
 	}{
-		{{"Firstname1 Lastname1", "firstname1.lastname1@example.com"}, {"Firstname2 Lastname2", "firstname2.lastname2@example.com"}}
-		{{"Firstname3 Lastname3", "firstname3.lastname3@example.com"}, {"Firstname4 Lastname4", "firstname4.lastname4@example.com"}}
+		{{"Firstname1 Lastname1", "firstname1.lastname1@example.com"}, {"Firstname2 Lastname2", "firstname2.lastname2@example.com"}},
+		{{"Firstname3 Lastname3", "firstname3.lastname3@example.com"}, {"Firstname4 Lastname4", "firstname4.lastname4@example.com"}},
 	}
-	for _, row := range userProfiles {
+	for _, row := range userProfiles1 {
 		for _, profile := range row {
 			fmt.Println(profile.Name, profile.Email)
 		}
