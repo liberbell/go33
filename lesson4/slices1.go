@@ -35,6 +35,7 @@ func main() {
 	subset := stockPrices[1:4]
 	fmt.Println("Sliced slice", subset)
 
+	fmt.Println("Appended User Slicer2: ", users)
 	usersSubset := users[1:3]
 	usersSubset[0] = "Name_7"
 	fmt.Println("Modified User Slice:", usersSubset)
