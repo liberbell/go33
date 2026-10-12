@@ -22,4 +22,7 @@ func main() {
 	users = append(users, "Name_4")
 
 	fmt.Println("Appended User Slicer: ", users)
+
+	stockPriceSlices := make([]float64, 3, 5)
+	fmt.Println("Slice with make - Length")
 }
