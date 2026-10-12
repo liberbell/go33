@@ -20,4 +20,6 @@ func main() {
 
 	users := []string{"Name_1", "Name_2", "Name_3"}
 	users = append(users, "Name_4")
+
+	fmt.Println("Appended User Slicer: ", users)
 }
