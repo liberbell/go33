@@ -29,4 +29,8 @@ func main() {
 
 	fmt.Println(userAges)
 
+	stockPrices1 := [3]float64{142.2, 150.1, 137.2}
+	stockPrices1[2] = 72.1
+	fmt.Println(stockPrices1)
+
 }
