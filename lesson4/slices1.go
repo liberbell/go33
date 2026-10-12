@@ -1,6 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+)
+
+type Slice struct {
+	ArrayPointer unsafe.Pointer
+	Length       int
+	Capacity     int
+}
 
 func main() {
 	var stockPricesArray [3]float64 = [3]float64{89.1, 132.4, 243.5}
@@ -8,4 +17,7 @@ func main() {
 
 	fmt.Println(stockPricesArray)
 	fmt.Println(stockPricesSlice)
+
+	users := []string{"Name_1", "Name_2", "Name_3"}
+	users = append(users, "Name_4")
 }
