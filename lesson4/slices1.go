@@ -37,5 +37,5 @@ func main() {
 
 	usersSubset := users[1:3]
 	usersSubset[0] = "Name_7"
-	fmt.Println("Modified ")
+	fmt.Println("Modified User Slice:", usersSubset)
 }
