@@ -34,4 +34,8 @@ func main() {
 	stockPrices := []float64{150.25, 153.49, 147.56, 149.22, 155.62}
 	subset := stockPrices[1:4]
 	fmt.Println("Sliced slice", subset)
+
+	usersSubset := users[1:3]
+	usersSubset[0] = "Name_7"
+	fmt.Println("Modified ")
 }
