@@ -21,6 +21,9 @@ func main() {
 
 	stocks := [3]string{"Apple", "Google", "Amazon"}
 	fmt.Println(stocks[0])
+	for _, symbol := range stockSymbols {
+		fmt.Println("Symbol is ", symbol)
+	}
 
 	var userAges [5]int
 
