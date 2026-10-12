@@ -24,5 +24,6 @@ func main() {
 	fmt.Println("Appended User Slicer: ", users)
 
 	stockPriceSlices := make([]float64, 3, 5)
-	fmt.Println("Slice with make - Length")
+	fmt.Println("Slice with make - Length", len(stockPriceSlices))
+	fmt.Println("Slice with make - Capacity", cap(stockPriceSlices))
 }
