@@ -10,4 +10,5 @@ func main() {
 	}
 
 	fmt.Println(userProfile)
+	fmt.Println("Firstname:", userProfile["FirstName_1"])
 }
