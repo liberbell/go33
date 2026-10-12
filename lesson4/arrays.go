@@ -22,4 +22,11 @@ func main() {
 	stocks := [3]string{"Apple", "Google", "Amazon"}
 	fmt.Println(stocks[0])
 
+	var userAges [5]int
+
+	userAges[0] = 25
+	userAges[2] = 30
+
+	fmt.Println(userAges)
+
 }
