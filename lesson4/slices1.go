@@ -30,4 +30,8 @@ func main() {
 	usersInternal := []string{"Name_1", "Name_2"}
 	sliceInternals := (*Slice)(unsafe.Pointer(&usersInternal))
 	fmt.Println("Slice Internals:", sliceInternals)
+
+	stockPrices := []float64{150.25, 153.49, 147.56, 149.22, 155.62}
+	subset := stockPrices[1:4]
+	fmt.Println("Sliced slice", subset)
 }
