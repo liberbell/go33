@@ -19,4 +19,7 @@ func main() {
 	stockSymbols := [...]string{"APPL", "GOOGL", "AMZN"}
 	fmt.Println(stockSymbols)
 
+	stocks := [3]string{"Apple", "Google", "Amazon"}
+	fmt.Println(stocks[0])
+
 }
