@@ -20,4 +20,12 @@ func main() {
 	}
 	userProfile2["Email2"] = "Email_21@example.com"
 	fmt.Println("UserProfile2: ", userProfile2)
+
+	userProfile3 := map[string]string{
+		"FirstName_3": "Name_3",
+		"Email3":      "Email_3@example.com",
+		"Phone3":      "111-222-3333",
+	}
+	userProfile3["LastName3"] = "LastName_3"
+	fmt.Println(userProfile3)
 }
