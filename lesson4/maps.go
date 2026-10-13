@@ -19,4 +19,5 @@ func main() {
 		"Phone2":      "111-222-3333",
 	}
 	userProfile2["Email2"] = "Email_21@example.com"
+	fmt.Println("UserProfile2: ", userProfile2)
 }
