@@ -10,5 +10,6 @@ func main() {
 	}
 
 	fmt.Println(userProfile)
-	fmt.Println("Firstname:", userProfile["FirstName_1"])
+	fmt.Println("Firstname: ", userProfile["FirstName_1"])
+	fmt.Println("Email: ", userProfile["Email1"])
 }
