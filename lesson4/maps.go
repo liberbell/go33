@@ -28,4 +28,7 @@ func main() {
 	}
 	userProfile3["LastName3"] = "LastName_3"
 	fmt.Println(userProfile3)
+
+	delete(userProfile3, "Phone3")
+	fmt.Println("deleted userprofile3: ", userProfile3)
 }
