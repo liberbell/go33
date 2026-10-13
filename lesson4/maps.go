@@ -44,4 +44,8 @@ func main() {
 	bankAccount := make(map[string]float64, 0)
 	bankAccount["Name_1"] = 1000.50
 	fmt.Println(bankAccount)
+
+	for accountHolder := range bankAccount {
+		fmt.Println(accountHolder)
+	}
 }
