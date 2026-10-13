@@ -31,4 +31,13 @@ func main() {
 
 	delete(userProfile3, "Phone3")
 	fmt.Println("deleted userprofile3: ", userProfile3)
+
+	userProfile5 := map[string]string{
+		"FirstName_5": "Name_5",
+		"Email_5":     "Email_5@example.com",
+		"Phone_5":     "111-222-3333",
+	}
+	for key, value := range userProfile5 {
+		fmt.Printf("%s: %s\n", key, value)
+	}
 }
