@@ -40,4 +40,8 @@ func main() {
 	for key, value := range userProfile5 {
 		fmt.Printf("%s: %s\n", key, value)
 	}
+
+	bankAccount := make(map[string]float64, 0)
+	bankAccount["Name_1"] = 1000.50
+	fmt.Println(bankAccount)
 }
