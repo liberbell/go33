@@ -46,6 +46,6 @@ func main() {
 	fmt.Println(bankAccount)
 
 	for accountHolder := range bankAccount {
-		fmt.Println(accountHolder)
+		fmt.Println("Account Holder: ", accountHolder)
 	}
 }
