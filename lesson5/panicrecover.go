@@ -32,4 +32,6 @@ func main() {
 	// panic("Fail to book the flight due to system error.")
 
 	fmt.Println("Starting flight booking process...")
+
+	bookFlight()
 }
