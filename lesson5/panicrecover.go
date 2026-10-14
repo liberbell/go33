@@ -2,6 +2,15 @@ package main
 
 import "fmt"
 
+func bookFlight() {
+
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Recovered from: ", r)
+		}
+	}()
+}
+
 func main() {
 
 	defer func() {
