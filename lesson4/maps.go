@@ -48,4 +48,12 @@ func main() {
 	for accountHolder := range bankAccount {
 		fmt.Println("Account Holder: ", accountHolder)
 	}
+
+	bankAcount := make(map[string]float64)
+	bankAcount["Name_1"] = 100.40
+	bankAcount["Name_2"] = 200.80
+	for _, balance := range bankAcount {
+		fmt.Println(balance)
+	}
+
 }
