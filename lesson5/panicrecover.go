@@ -15,6 +15,8 @@ func bookFlight() {
 
 	fmt.Println("Attempting to book a flight....")
 	time.Sleep(2 * time.Second)
+
+	panic("Flight is not available.")
 }
 
 func main() {
@@ -27,5 +29,7 @@ func main() {
 
 	fmt.Println("Attempting to book a flight....")
 
-	panic("Fail to book the flight due to system error.")
+	// panic("Fail to book the flight due to system error.")
+
+	fmt.Println("Starting flight booking process...")
 }
