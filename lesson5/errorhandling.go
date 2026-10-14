@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"log"
 )
 
@@ -17,5 +18,13 @@ func main() {
 
 	if err != nil {
 		log.Fatal(err)
+	}
+
+	fmt.Printf("Result: %f\n", result)
+
+	_, err = divide(4, 0)
+
+	if err != nil {
+		log.Printf("Error: %s\n", err)
 	}
 }
