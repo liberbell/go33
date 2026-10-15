@@ -24,8 +24,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-	defer(func()  {
+	defer func() {
 		db.Close()
 		fmt.Println("Database connection closed")
-	})
+	}()
+
 }
