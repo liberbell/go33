@@ -29,4 +29,6 @@ func main() {
 		fmt.Println("Database connection closed")
 	}()
 
+	getUserProfile("Apple", db)
+	fmt.Println("Main function completed")
 }
