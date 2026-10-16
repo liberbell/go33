@@ -21,6 +21,10 @@ func (b *Bank) Open(accountName string) (*Bank, error) {
 	return &Bank{}, nil
 }
 
+func (b *Bank) Close() {
+	fmt.Println("Closing account")
+}
+
 func main() {
 	defer fmt.Println("Withdrawal completed")
 	defer fmt.Println("Deposit completed")
