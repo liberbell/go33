@@ -18,6 +18,7 @@ func getUserProfile(Name_1 string, db *sql.DB) {
 
 func (b *Bank) Open(accountName string) (*Bank, error) {
 	fmt.Printf("Opening account: %s\n", accountName)
+	return &Bank{}, nil
 }
 
 func main() {
