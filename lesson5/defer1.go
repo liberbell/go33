@@ -38,7 +38,11 @@ func transferFunds(Name_2, Name_3 string, bank *Bank) error {
 
 	defer func() {
 		source.Close()
-	}
+		fmt.Printf("Account %s closed\n", Name_2)
+	}()
+
+	destination, err := bank.Open(Name_3)
+
 }
 
 func main() {
