@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+type BankAccount struct{}
+
+func (b *BankAccount) Open(accountID string) (*BankAccount, error) {
+
+}
+
 func main() {
 	balance := 1000
 
