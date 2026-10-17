@@ -79,4 +79,11 @@ func main() {
 	getUserProfile("Apple", db)
 	fmt.Println("Main function completed")
 
+	fmt.Println("Starting the main function")
+	bank := &Bank{}
+	err = transferFunds("AccountA", "AccountB", bank)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Main function completed")
 }
