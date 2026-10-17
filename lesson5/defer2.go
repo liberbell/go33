@@ -5,7 +5,8 @@ import "fmt"
 type BankAccount struct{}
 
 func (b *BankAccount) Open(accountID string) (*BankAccount, error) {
-
+	fmt.Printf("Opening account with ID: %s\n", accountID)
+	return &BankAccount{}, nil
 }
 
 func main() {
