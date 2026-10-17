@@ -30,6 +30,17 @@ func (b *Bank) Transfer(source, destination *Bank) error {
 	return nil
 }
 
+func transferFunds(Name_2, Name_3 string, bank *Bank) error {
+	source, err := bank.Open(Name_2)
+	if err != nil {
+		return err
+	}
+
+	defer func() {
+		source.Close()
+	}
+}
+
 func main() {
 	defer fmt.Println("Withdrawal completed")
 	defer fmt.Println("Deposit completed")
