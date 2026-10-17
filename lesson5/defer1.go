@@ -55,6 +55,8 @@ func transferFunds(Name_2, Name_3 string, bank *Bank) error {
 	if err != nil {
 		return err
 	}
+
+	return nil
 }
 
 func main() {
