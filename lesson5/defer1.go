@@ -42,7 +42,13 @@ func transferFunds(Name_2, Name_3 string, bank *Bank) error {
 	}()
 
 	destination, err := bank.Open(Name_3)
+	if err != nil {
+		return nil
+	}
 
+	defer func()  {
+		destination.Close()
+	}
 }
 
 func main() {
