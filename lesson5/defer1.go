@@ -25,6 +25,11 @@ func (b *Bank) Close() {
 	fmt.Println("Closing account")
 }
 
+func (b *Bank) Transfer(source, destination *Bank) error {
+	fmt.Println("Transfering funds from source to destination account")
+	return nil
+}
+
 func main() {
 	defer fmt.Println("Withdrawal completed")
 	defer fmt.Println("Deposit completed")
@@ -44,4 +49,5 @@ func main() {
 
 	getUserProfile("Apple", db)
 	fmt.Println("Main function completed")
+
 }
