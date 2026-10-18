@@ -16,4 +16,5 @@ func main() {
 	var b *int = &a
 
 	fmt.Println(a)
+	fmt.Println(*b)
 }
