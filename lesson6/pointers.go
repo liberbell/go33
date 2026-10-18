@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+type Point struct {
+	X int
+	Y int
+}
+
 func modify(x *int) {
 	*x = 50
 }
