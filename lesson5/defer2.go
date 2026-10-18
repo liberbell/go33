@@ -14,7 +14,12 @@ func (b *BankAccount) Close() {
 }
 
 func processAccount(Name_4 string, bank *BankAccount) error {
-	fmt.Printf("Processing account")
+	fmt.Printf("Processing account with ID: %s\n", Name_4)
+
+	account, err := bank.Open(Name_4)
+	if err != nil {
+		return err
+	}
 }
 
 func main() {
