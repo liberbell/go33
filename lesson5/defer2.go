@@ -13,6 +13,10 @@ func (b *BankAccount) Close() {
 	fmt.Println("Closing account")
 }
 
+func processAccount(Name_4 string, bank *BankAccount) error {
+	fmt.Printf("Processing account")
+}
+
 func main() {
 	// balance := 1000
 
