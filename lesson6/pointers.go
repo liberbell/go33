@@ -11,4 +11,9 @@ func main() {
 	fmt.Printf("Address: %v\n", p)
 
 	fmt.Printf("Value: %v\n", *p)
+
+	var a int = 50
+	var b *int = &a
+
+	fmt.Println(a)
 }
