@@ -11,7 +11,7 @@ func modify(x *int) {
 	*x = 50
 }
 
-func (p *Point) changeCordinates(xNew int, yNew int) {
+func (p *Point) ChangeCordinates(xNew int, yNew int) {
 	p.X = xNew
 	p.Y = yNew
 }
@@ -43,7 +43,10 @@ func main() {
 
 	fmt.Printf("Modified value: %d\n", c)
 
-	p := &Point{X: 5, Y: 3}
-	fmt.Println(*p)
+	q := &Point{X: 5, Y: 3}
+	fmt.Println(*q)
+
+	q.ChangeCordinates(1, 2)
+	fmt.Println(*q)
 
 }
