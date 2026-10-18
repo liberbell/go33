@@ -9,4 +9,6 @@ func main() {
 	fmt.Printf("Type of Pointer: %T\n", p)
 
 	fmt.Printf("Address: %v\n", p)
+
+	fmt.Printf("Value: %v\n", *p)
 }
