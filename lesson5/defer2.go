@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 type BankAccount struct{}
 
@@ -36,4 +39,9 @@ func main() {
 	// fmt.Println("Account accessed")
 
 	fmt.Println("Starting the main function")
+	bank := &BankAccount{}
+	err := processAccount("Account_1234", bank)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
