@@ -43,4 +43,7 @@ func main() {
 
 	fmt.Printf("Modified value: %d\n", c)
 
+	p := &Point{X: 5, Y: 3}
+	fmt.Println(*p)
+
 }
