@@ -11,6 +11,11 @@ func modify(x *int) {
 	*x = 50
 }
 
+func (p *Point) changeCordinates(xNew int, yNew int) {
+	p.X = xNew
+	p.Y = yNew
+}
+
 func main() {
 
 	var n = 10
