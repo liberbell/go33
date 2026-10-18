@@ -9,11 +9,17 @@ func (b *BankAccount) Open(accountID string) (*BankAccount, error) {
 	return &BankAccount{}, nil
 }
 
+func (b *BankAccount) Close() {
+	fmt.Println("Closing account")
+}
+
 func main() {
-	balance := 1000
+	// balance := 1000
 
-	defer fmt.Println("Account balance after transaction: ", balance)
+	// defer fmt.Println("Account balance after transaction: ", balance)
 
-	balance += 500
-	fmt.Println("Account accessed")
+	// balance += 500
+	// fmt.Println("Account accessed")
+
+	fmt.Println("Account ")
 }
