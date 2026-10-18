@@ -17,4 +17,7 @@ func main() {
 
 	fmt.Println(a)
 	fmt.Println(*b)
+
+	*b = 100
+	fmt.Println(a)
 }
