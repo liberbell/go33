@@ -35,5 +35,5 @@ func main() {
 	// balance += 500
 	// fmt.Println("Account accessed")
 
-	fmt.Println("Account ")
+	fmt.Println("Starting the main function")
 }
