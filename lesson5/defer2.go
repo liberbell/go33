@@ -20,6 +20,11 @@ func processAccount(Name_4 string, bank *BankAccount) error {
 	if err != nil {
 		return err
 	}
+
+	defer account.Close()
+	fmt.Println("Performing operations on the account")
+
+	return nil
 }
 
 func main() {
