@@ -53,4 +53,7 @@ func main() {
 	q.ChangeCordinates(1, 2)
 	fmt.Println(*q)
 
+	numbers := []int{1, 2, 3, 4, 5}
+	fmt.Println("Original Slice: ", numbers)
+	modifySlice(&numbers)
 }
