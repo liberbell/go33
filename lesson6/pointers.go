@@ -16,6 +16,10 @@ func (p *Point) ChangeCordinates(xNew int, yNew int) {
 	p.Y = yNew
 }
 
+func modifySlice(slicer *[]int) {
+	*slicer = append(*slicer, 100)
+}
+
 func main() {
 
 	var n = 10
