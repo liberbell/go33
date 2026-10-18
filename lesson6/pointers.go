@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func modify(x *int) {
+	*x = 50
+}
+
 func main() {
 
 	var n = 10
@@ -20,4 +24,13 @@ func main() {
 
 	*b = 100
 	fmt.Println(a)
+	fmt.Println(*b)
+
+	var c int = 10
+
+	fmt.Printf("Original value: %d\n", c)
+	modify(&c)
+
+	fmt.Printf("Modified value: %d\n", c)
+
 }
