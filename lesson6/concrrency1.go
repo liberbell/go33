@@ -31,6 +31,6 @@ func main() {
 	}
 }
 
-func processOrder(order string) {
-	fmt.Println("Processing order: ", order)
-}
+// func processOrder(order string) {
+// 	fmt.Println("Processing order: ", order)
+// }
