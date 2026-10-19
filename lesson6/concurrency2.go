@@ -18,4 +18,7 @@ func main() {
 			fmt.Println("Processing order: ", o)
 		}(order)
 	}
+
+	waitgroup.Wait()
+	fmt.Println("All orders have been processed")
 }
