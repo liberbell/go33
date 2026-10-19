@@ -14,6 +14,8 @@ func main() {
 	}("Buy 1000 shares of MSFT")
 
 	time.Sleep(1 * time.Second)
+
+	fmt.Println("Main function continues executing...")
 }
 
 func processOrder(order string) {
