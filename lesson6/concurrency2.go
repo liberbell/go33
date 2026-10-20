@@ -47,4 +47,7 @@ func main() {
 		go ob.addOrder(&wg, order)
 	}
 
+	wg.Wait()
+	fmt.Println("All orders have been added:", ob.orders)
+
 }
