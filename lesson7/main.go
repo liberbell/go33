@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"calculator/calculator"
+	"fmt"
+)
 
 func main() {
 	result := calculator.Add(5, 3)
