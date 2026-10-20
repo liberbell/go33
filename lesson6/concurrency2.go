@@ -39,7 +39,7 @@ func main() {
 	var wg sync.WaitGroup
 	ob := OrderBook{}
 
-	orders := {"Buy 100 shares of APPL", "Sell 50 shares of MSFT", "Buy 200 shares of GOOGLE"}
+	orders := []string{"Buy 100 shares of APPL", "Sell 50 shares of MSFT", "Buy 200 shares of GOOGLE"}
 
 	wg.Add(len(orders))
 
