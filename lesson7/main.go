@@ -1,8 +1,9 @@
 package main
 
 import (
-	"calculator/calculator"
 	"fmt"
+
+	"lesson7/calculator"
 )
 
 func main() {
