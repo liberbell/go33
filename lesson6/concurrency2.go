@@ -12,6 +12,8 @@ type OrderBook struct {
 
 func (ob *OrderBook) addOrder(wg *sync.WaitGroup, order string) {
 	ob.mx.Lock()
+	defer ob.mx.Unlock()
+	defer wg.Done()
 }
 
 func main() {
