@@ -14,6 +14,9 @@ func (ob *OrderBook) addOrder(wg *sync.WaitGroup, order string) {
 	ob.mx.Lock()
 	defer ob.mx.Unlock()
 	defer wg.Done()
+
+	ob.orders = append(ob.orders, order)
+	fmt.Println("Added order: ", order)
 }
 
 func main() {
