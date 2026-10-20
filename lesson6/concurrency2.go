@@ -5,6 +5,15 @@ import (
 	"sync"
 )
 
+type OrderBook struct {
+	mx     sync.Mutex
+	orders []string
+}
+
+func (ob *OrderBook) addOrder(wg *sync.WaitGroup, order string) {
+	ob.mx.Lock()
+}
+
 func main() {
 
 	var waitgroup sync.WaitGroup
