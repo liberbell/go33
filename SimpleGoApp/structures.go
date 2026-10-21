@@ -9,3 +9,7 @@ func NewData() *Data {
 		Elements: make([]int, 0),
 	}
 }
+
+func (d *Data) AddElement(element int) {
+	d.Elements = append(d.Elements, element)
+}
