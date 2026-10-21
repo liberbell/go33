@@ -9,11 +9,13 @@ import (
 )
 
 func main() {
-	result := calculator.Add(5, 3)
-	fmt.Println(result)
 
 	err := termbox.Init()
 	if err != nil {
 		fmt.Println(err)
 	}
+	defer termbox.Close()
+
+	result := calculator.Add(5, 3)
+	fmt.Println(result)
 }
