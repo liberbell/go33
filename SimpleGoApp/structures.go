@@ -22,4 +22,7 @@ func (d *Data) RemoveElement(element int) {
 			break
 		}
 	}
+	if index != -1 {
+		d.Elements = append(d.Elements[:index], d.Elements[index+1:]...)
+	}
 }
