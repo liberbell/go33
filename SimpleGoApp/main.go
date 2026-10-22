@@ -11,5 +11,8 @@ func askForNumber() int {
 	fmt.Println("Please enter a number to add to the data structure:")
 	reader := bufio.NewReader(os.Stdin)
 	input, _ := reader.ReadString('\n')
-	number, err := strconv.Atoi()
+	number, err := strconv.Atoi(input[:len(input)-1])
+	if err != nil {
+		fmt.Println("Invalid input. Please enter a valid number.")
+	}
 }
