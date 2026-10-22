@@ -14,5 +14,8 @@ func askForNumber() int {
 	number, err := strconv.Atoi(input[:len(input)-1])
 	if err != nil {
 		fmt.Println("Invalid input. Please enter a valid number.")
+		return askForNumber
 	}
+
+	return number
 }
