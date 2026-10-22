@@ -17,7 +17,7 @@ func (d *Data) AddElement(element int) {
 func (d *Data) RemoveElement(element int) {
 	index := -1
 	for i, e := range d.Elements {
-		if e = element {
+		if e == element {
 			index = i
 			break
 		}
