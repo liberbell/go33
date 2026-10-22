@@ -28,9 +28,12 @@ func (ui *UI) Render(data *Data) {
 }
 
 func printAt(x, y int, text string, fg, bg termbox.Attribute) {
-
 	for _, char := range text {
 		termbox.SetCell(x, y, char, fg, bg)
 		x++
 	}
+}
+
+func CloseUI() {
+	termbox.Close()
 }
