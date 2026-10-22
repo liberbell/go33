@@ -13,3 +13,7 @@ func NewUI() *UI {
 
 	return &UI{}
 }
+
+func (ui *UI) Render(data *Data) {
+	termbox.Clear(termbox.ColorDefault, termbox.ColorDefault)
+}
