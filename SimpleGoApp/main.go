@@ -22,4 +22,6 @@ func askForNumber() int {
 
 func askForConfirmation(message string) bool {
 	fmt.Println("message " + "(yes/no): ")
+	reader := bufio.NewReader(os.Stdin)
+	response, _ := reader.ReadString('\n')
 }
