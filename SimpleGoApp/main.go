@@ -19,3 +19,7 @@ func askForNumber() int {
 
 	return number
 }
+
+func askForConfirmation(message string) bool {
+	fmt.Println("message " + "(yes/no): ")
+}
