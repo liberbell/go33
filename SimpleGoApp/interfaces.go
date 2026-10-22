@@ -24,4 +24,13 @@ func (ui *UI) Render(data *Data) {
 	for i, element := range data.Elements {
 		printAt(0, i, fmt.Sprintf("Element %d: %d", i+1, element), termbox.ColorWhite, termbox.ColorBlack)
 	}
+	termbox.Flush()
+}
+
+func printAt(x, y int, text string, fg, bg termbox.Attribute) {
+
+	for _, char := range text {
+		termbox.SetCell(x, y, char, fg, bg)
+		x++
+	}
 }
