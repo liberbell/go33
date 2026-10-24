@@ -10,4 +10,7 @@ func mockStdin(t *testing.T, input string, testFunc func()) {
 	if err != nil {
 		t.Fatal(err)
 	}
+
+	origStdin := os.Stdin
+	os.Stdin = reader
 }
