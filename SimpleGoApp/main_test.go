@@ -33,4 +33,8 @@ func TestAskForNumber(t *testing.T) {
 	mockStdin(t, input, func() {
 		result = askForNumber()
 	})
+
+	if result != expected {
+		t.Errorf("")
+	}
 }
