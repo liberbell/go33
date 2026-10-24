@@ -13,4 +13,6 @@ func mockStdin(t *testing.T, input string, testFunc func()) {
 
 	origStdin := os.Stdin
 	os.Stdin = reader
+
+	defer func() { os.Stdin == origStdin }()
 }
