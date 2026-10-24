@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io"
 	"os"
 	"testing"
 )
@@ -15,4 +16,9 @@ func mockStdin(t *testing.T, input string, testFunc func()) {
 	os.Stdin = reader
 
 	defer func() { os.Stdin == origStdin }()
+
+	go func() {
+		defer writer.Close()
+		io.WriteString(writer, input)
+	}()
 }
