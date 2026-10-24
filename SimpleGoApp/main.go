@@ -1,6 +1,7 @@
 package main
 
 import (
+	simpleGoApp "SimpleGoApp"
 	"bufio"
 	"fmt"
 	"os"
@@ -26,4 +27,10 @@ func askForConfirmation(message string) bool {
 	response, _ := reader.ReadString('\n')
 	response = response[:len(response)-1]
 	return response == "yes"
+}
+
+func main() {
+	data := simpleGoApp.NewData()
+
+	number := askForNumber()
 }
