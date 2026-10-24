@@ -21,4 +21,16 @@ func mockStdin(t *testing.T, input string, testFunc func()) {
 		defer writer.Close()
 		io.WriteString(writer, input)
 	}()
+
+	testFunc()
+}
+
+func TestAskForNumber(t *testing.T) {
+	input := "42\n"
+	expected := 42
+	result := 0
+
+	mockStdin(t, input, func() {
+		result = askForNumber()
+	})
 }
