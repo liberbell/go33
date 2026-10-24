@@ -33,4 +33,7 @@ func main() {
 	data := simpleGoApp.NewData()
 
 	number := askForNumber()
+
+	data.AddElement(number)
+	fmt.Printf("Number %d added to the data structure.\n", number)
 }
