@@ -36,4 +36,9 @@ func main() {
 
 	data.AddElement(number)
 	fmt.Printf("Number %d added to the data structure.\n", number)
+
+	ui := simpleGoApp.NewUI()
+	ui.Render(data)
+
+	simpleGoApp.CloseUI()
 }
