@@ -13,4 +13,7 @@ func SaveToCsv(blog Blog) {
 	defer file.Close()
 
 	writer := csv.NewWriter(file)
+	defer writer.Flush()
+
+	writer.Write([]string{blog.Title, blog.Date, blog.Author})
 }
