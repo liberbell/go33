@@ -35,6 +35,6 @@ func TestAskForNumber(t *testing.T) {
 	})
 
 	if result != expected {
-		t.Errorf("")
+		t.Errorf("askForNumber() = %d; want %d", result, expected)
 	}
 }
