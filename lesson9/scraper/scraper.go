@@ -1,6 +1,7 @@
 package scraper
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/gocolly/colly"
@@ -21,5 +22,9 @@ func Start() {
 	err := c.Visit("https://go.dev/blog/")
 	if err != nil {
 		log.Fatal(err)
+	}
+
+	for _, blog := range blogs {
+		fmt.Printf("Title: %s - Date: %s - Author: %s\n", blog.Title, blog.Date, blog.Author)
 	}
 }
