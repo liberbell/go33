@@ -12,5 +12,8 @@ func main() {
 	c.OnHTML("#blogindex", func(e *colly.HTMLElement) {
 		date := e.ChildText("p:nth-child(1) > span.date")
 		fmt.Println("Date:", date)
+
+		title := e.ChildText("p:nth-child(1) > a")
+		fmt.Println("Title: ", title)
 	})
 }
