@@ -26,5 +26,7 @@ func Start() {
 
 	for _, blog := range blogs {
 		fmt.Printf("Title: %s - Date: %s - Author: %s\n", blog.Title, blog.Date, blog.Author)
+		SaveBlog(blog)
+		SaveToCsv(blog)
 	}
 }
