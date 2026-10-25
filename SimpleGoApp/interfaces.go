@@ -1,4 +1,4 @@
-package simpleGoApp
+package SimpleGoApp
 
 import (
 	"fmt"

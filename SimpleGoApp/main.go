@@ -30,7 +30,7 @@ func askForConfirmation(message string) bool {
 }
 
 func main() {
-	data := simpleGoApp.NewData()
+	data := SimpleGoApp.NewData()
 
 	number := askForNumber()
 
