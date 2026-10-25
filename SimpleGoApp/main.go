@@ -40,5 +40,5 @@ func main() {
 	ui := simpleGoApp.NewUI()
 	ui.Render(data)
 
-	simpleGoApp.CloseUI()
+	SimpleGoApp.CloseUI()
 }
