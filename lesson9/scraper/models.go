@@ -1,5 +1,7 @@
 package scraper
 
 type Blog struct {
-	Title string
+	Title  string
+	Date   string
+	Author string
 }
