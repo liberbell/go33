@@ -1,6 +1,10 @@
 package scraper
 
-import "github.com/gocolly/colly"
+import (
+	"log"
+
+	"github.com/gocolly/colly"
+)
 
 func Start() {
 	c := colly.NewCollector()
@@ -13,4 +17,9 @@ func Start() {
 		author := e.ChildText(".author")
 		blogs := append(blogs, Blog{Title: title, Date: date, Author: author})
 	})
+
+	err := c.Visit("https://go.dev/blog/")
+	if err != nil {
+		log.Fatal(err)
+	}
 }
