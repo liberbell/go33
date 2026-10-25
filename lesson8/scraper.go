@@ -1,7 +1,16 @@
 package main
 
-import "github.com/gocolly/colly/v2"
+import (
+	"fmt"
+
+	"github.com/gocolly/colly/v2"
+)
 
 func main() {
 	c := colly.NewCollector()
+
+	c.OnHTML("#blogindex", func(e *colly.HTMLElement) {
+		date := e.ChildText("p:nth-child(1) > span.date")
+		fmt.Println("Date:", date)
+	})
 }
