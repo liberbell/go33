@@ -30,3 +30,7 @@ func InitDB() {
 		log.Fatal(err)
 	}
 }
+
+func SaveBlog(blog Blog) {
+	_, err := db.Exec("INSERT INTO blogs (title, date, author) VALUES (?, ?, ?)", blog.Title, blog.Date, blog.author)
+}
