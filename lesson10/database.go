@@ -2,6 +2,7 @@ package scraper
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -33,4 +34,7 @@ func InitDB() {
 
 func SaveBlog(blog Blog) {
 	_, err := db.Exec("INSERT INTO blogs (title, date, author) VALUES (?, ?, ?)", blog.Title, blog.Date, blog.Author)
+	if err != nil {
+		fmt.Println("Error inserting new blog: ", err)
+	}
 }
