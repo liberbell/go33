@@ -11,8 +11,12 @@ var db *sql.DB
 
 func InitDB() {
 	var err error
-	db, err := sql.Open("mysql", "user01@tcp(127.0.0.1:3306)")
+	db, err := sql.Open("mysql", "user01@tcp(127.0.0.1:3306)/msk")
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	createTable := `
+		CREATE TABLE IF NOT EXISTS
+	`
 }
