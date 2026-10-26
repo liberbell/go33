@@ -17,6 +17,9 @@ func InitDB() {
 	}
 
 	createTable := `
-		CREATE TABLE IF NOT EXISTS
+		CREATE TABLE IF NOT EXISTS blogs (
+		id INT AUTO_INCREMENT PRIMARY KEY,
+		title VARCHAR(255) NOT NULL,
+		)
 	`
 }
