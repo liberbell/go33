@@ -24,4 +24,9 @@ func InitDB() {
 		author VARCHAR(255)
 		);
 	`
+
+	_, err = db.Exec(createTable)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
