@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/v2"
 )
 
 func Start() {
