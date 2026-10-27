@@ -16,7 +16,7 @@ func Start() {
 		title := e.ChildText("a")
 		date := e.ChildText(".date")
 		author := e.ChildText(".author")
-		blogs := append(blogs, Blog{Title: title, Date: date, Author: author})
+		blogs = append(blogs, Blog{Title: title, Date: date, Author: author})
 	})
 
 	err := c.Visit("https://go.dev/blog/")
