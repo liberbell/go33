@@ -27,3 +27,5 @@ require (
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
 )
+
+replace github.com/gobwas/glob => github.com/gobwas/glob v0.2.3
