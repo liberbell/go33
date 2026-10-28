@@ -2,6 +2,7 @@ package crud_app
 
 import (
 	"log"
+	"os"
 
 	"github.com/joho/godotenv"
 )
@@ -15,4 +16,8 @@ func NewDatabases() (*DB, error) {
 	if err != nil {
 		log.Fatalf("Error loding .env file: %v", err)
 	}
+
+	host := os.Getenv("DB_HOST")
+	port := os.Getenv("DB_PORT")
+	user := os.Getenv("DB_USER")
 }
