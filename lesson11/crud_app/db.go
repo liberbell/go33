@@ -1,6 +1,7 @@
 package crud_app
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -22,4 +23,7 @@ func NewDatabases() (*DB, error) {
 	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")
 	dbname := os.Getenv("DB_NAME")
+
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4$parseTime=True&log=local", user, password, host, port, dbname)
+
 }
