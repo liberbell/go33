@@ -32,4 +32,8 @@ func NewDatabases() (*DB, error) {
 		return nil, fmt.Errorf("Failed to connect to the database: %v", err)
 	}
 
+	if err := AutoMigrate(db); err != nil {
+		return nil, fmt.Errorf("Failed to auto-migrate tables: %v", err)
+	}
+
 }
