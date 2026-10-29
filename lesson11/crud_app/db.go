@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-sql-driver/mysql"
 	"github.com/joho/godotenv"
+	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
