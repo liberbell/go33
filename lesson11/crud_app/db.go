@@ -7,6 +7,7 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/joho/godotenv"
+	"gorm.io/gorm"
 )
 
 type DB struct {
