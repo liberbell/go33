@@ -36,4 +36,6 @@ func NewDatabases() (*DB, error) {
 		return nil, fmt.Errorf("Failed to auto-migrate tables: %v", err)
 	}
 
+	return &DB{db}, nil
+
 }
