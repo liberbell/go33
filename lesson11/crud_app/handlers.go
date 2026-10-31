@@ -49,4 +49,9 @@ func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
+	id, err := strconv.Atoi(vars("id"))
+	if err != nil {
+		http.Error(w, "Invalid user id", http.StatusBadRequest)
+		return
+	}
 }
