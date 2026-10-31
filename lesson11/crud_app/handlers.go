@@ -46,3 +46,7 @@ func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
 	}
 	json.NewEncoder(w).Encode(user)
 }
+
+func (h *Handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
+
+}
