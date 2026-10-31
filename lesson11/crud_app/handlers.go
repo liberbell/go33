@@ -60,4 +60,10 @@ func (h *Handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid request Body", http.StatusBadRequest)
 		return
 	}
+
+	var user User
+	if err := h.db.Model(&user).Where("id = ?", id).Updates(userUpdates).Error; err != nil {
+		http.Error(w, "Failed to update user: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
 }
