@@ -41,6 +41,7 @@ func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
 
 	var user User
 	if err := h.db.First(&user, id).Error; err != nil {
-		return nil, err
+		return
 	}
+	json.NewEncoder(w).Encode(user)
 }
