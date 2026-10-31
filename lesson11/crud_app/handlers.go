@@ -54,4 +54,10 @@ func (h *Handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid user id", http.StatusBadRequest)
 		return
 	}
+
+	var userUpdates User
+	if err := json.NewDecoder(r.Body).Decode(&userUpdates); err != nil {
+		http.Error(w, "Invalid request Body", http.StatusBadRequest)
+		return
+	}
 }
