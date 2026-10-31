@@ -38,4 +38,9 @@ func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid user id", http.StatusBadRequest)
 		return
 	}
+
+	var user User
+	if err := h.db.First(&user, id).Error; err != nil {
+		return nil, err
+	}
 }
