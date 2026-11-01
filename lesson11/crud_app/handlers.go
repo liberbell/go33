@@ -33,7 +33,7 @@ func (h *Handler) CreateUser(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	id, err := strconv.Atoi(vars("id"))
+	id, err := strconv.Atoi(vars["id"])
 	if err != nil {
 		http.Error(w, "Invalid user id", http.StatusBadRequest)
 		return
@@ -49,7 +49,7 @@ func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
 
 func (h *Handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	id, err := strconv.Atoi(vars("id"))
+	id, err := strconv.Atoi(vars["id"])
 	if err != nil {
 		http.Error(w, "Invalid user id", http.StatusBadRequest)
 		return
@@ -68,4 +68,9 @@ func (h *Handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	json.NewEncoder(w).Encode(user)
+}
+
+func (h *Handler) DeleteUser(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	id, err := strconv.Atoi(vars["id"])
 }
