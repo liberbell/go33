@@ -4,6 +4,7 @@ import (
 	"crud_app/crud_app"
 	"log"
 
+	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 )
 
