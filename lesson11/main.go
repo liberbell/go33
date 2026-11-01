@@ -25,4 +25,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to initialize database: %v", err)
 	}
+
+	handler := crud_app.NewHandler(db)
+	r := mux.NewRouter()
 }
