@@ -29,5 +29,8 @@ func main() {
 
 	handler := crud_app.NewHandler(db)
 	r := mux.NewRouter()
+
 	r.HandleFunc("/users", handler.CreateUser).Methods("POST")
+	r.HandleFunc("/users/{id:[0-9]+}", handler.GetUser).Methods("GET")
+	r.HandleFunc("/users/{id:[0-9]+}", handler.UpdateUser).Methods("PUT")
 }
