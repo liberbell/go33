@@ -7,4 +7,5 @@ func loadEnv() error {
 	if err != nil {
 		return err
 	}
+	return nil
 }
