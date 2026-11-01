@@ -80,5 +80,9 @@ func (h *Handler) DeleteUser(w http.ResponseWriter, r *http.Request) {
 
 	if err := h.db.Where("id = ?", id).Delete(&User{}).Error; err != nil {
 		http.Error(w, "Failed to delete user", http.StatusInternalServerError)
+		return
 	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("User successfully deleted"))
 }
