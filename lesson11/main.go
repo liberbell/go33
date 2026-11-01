@@ -33,4 +33,5 @@ func main() {
 	r.HandleFunc("/users", handler.CreateUser).Methods("POST")
 	r.HandleFunc("/users/{id:[0-9]+}", handler.GetUser).Methods("GET")
 	r.HandleFunc("/users/{id:[0-9]+}", handler.UpdateUser).Methods("PUT")
+	r.HandleFunc("/users/{id:[0-9]+}", handler.DeleteUser).Methods("DELETE")
 }
