@@ -28,4 +28,5 @@ func main() {
 
 	handler := crud_app.NewHandler(db)
 	r := mux.NewRouter()
+	r.HandleFunc("/users", handler.CreateUser).Methods("POST")
 }
