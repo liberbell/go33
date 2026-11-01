@@ -73,4 +73,12 @@ func (h *Handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) DeleteUser(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id, err := strconv.Atoi(vars["id"])
+	if err != nil {
+		http.Error(w, "Invalid user id", http.StatusBadRequest)
+		return
+	}
+
+	if err := h.db.Where("id = ?", id).Delete(&User{}).Error; err != nil {
+		http.Error(w, "Failed to delete user", http.StatusInternalServerError)
+	}
 }
