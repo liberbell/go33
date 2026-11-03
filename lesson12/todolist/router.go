@@ -18,4 +18,5 @@ func (handler *Handler) InitRouter() *gin.Engine {
 	router.GET("/tasks", handler.GetTaskHandler)
 	router.POST("/tasks", handler.CreateTaskHandler)
 	router.PUT("/tasks/:id", handler.UpdateTaskHandler)
+	router.DELETE("/tasks/:id", handler.DeleteTaskHandler)
 }
