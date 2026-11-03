@@ -8,5 +8,6 @@ type Handler struct {
 }
 
 func (handler *Handler) GetTasksHandler(c *gin.Context) {
-
+	tasks := handler.DB.GetTasks()
+	c.JSON(200, tasks)
 }
