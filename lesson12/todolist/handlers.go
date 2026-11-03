@@ -45,4 +45,10 @@ func (handler *Handler) DeleteTaskHandler(c *gin.Context) {
 		c.JSON(400, gin.H{"error": "Invalid task ID"})
 		return
 	}
+
+	id := uint(idInt)
+	success := handler.DB.DeleteTask(id)
+	if success {
+		c.JSON(400, gin.H{"error": "Failed to delete task"})
+	}
 }
