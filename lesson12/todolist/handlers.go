@@ -33,3 +33,7 @@ func (handler *Handler) UpdateTaskHandlr(c *gin.Context) {
 	updatedTask := handler.DB.UptateTask(task)
 	c.JSON(200, updatedTask)
 }
+
+func (handler *Handler) DeleteTaskHandler(c *gin.Context) {
+	idStr := c.Param("id")
+}
