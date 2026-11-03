@@ -14,4 +14,8 @@ func (handler *Handler) GetTasksHandler(c *gin.Context) {
 
 func (handler *Handler) CreateTaskHandler(c *gin.Context) {
 	var task Task
+	if err := c.ShouldBindJSON(&task); err != nil {
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
 }
