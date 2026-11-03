@@ -22,3 +22,10 @@ func (handler *Handler) CreateTaskHandler(c *gin.Context) {
 	createTask := handler.DB.CreateTask(task.Title, task.Description, task.Completed)
 	c.JSON(201, createTask)
 }
+
+func (handler *Handler) UpdateTaskHandlr(c *gin.Context) {
+	var task Task
+	if err := c.ShouldBindJSON(&task); err != nil {
+		c.JSON()
+	}
+}
