@@ -11,5 +11,5 @@ func NewDatabse() *Database {
 }
 
 func (database *Database) InitDB() *gorm.DB {
-	db, err := gorm.Open("mysql")
+	db, err := gorm.Open("mysql", "user01:password@tcp(localhost:3306)/mak?charset=utf8")
 }
