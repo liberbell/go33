@@ -11,3 +11,7 @@ func (handler *Handler) GetTasksHandler(c *gin.Context) {
 	tasks := handler.DB.GetTasks()
 	c.JSON(200, tasks)
 }
+
+func (handler *Handler) CreateTaskHandler(c *gin.Context) {
+	var task Task
+}
