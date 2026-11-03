@@ -29,4 +29,7 @@ func (handler *Handler) UpdateTaskHandlr(c *gin.Context) {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
+
+	updatedTask := handler.DB.UptateTask(task)
+	c.JSON(200, updatedTask)
 }
