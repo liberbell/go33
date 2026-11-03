@@ -9,3 +9,7 @@ type Database struct {
 func NewDatabse() *Database {
 	return &Database{}
 }
+
+func (database *Database) InitDB() *gorm.DB {
+	db, err := gorm.Open("mysql")
+}
