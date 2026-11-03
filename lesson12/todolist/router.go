@@ -14,4 +14,7 @@ func (handler *Handler) InitRouter() *gin.Engine {
 	config.AllowHeaders = []string{"Origin", "Contetn-Length", "Content-Type"}
 
 	router.Use(cors.New(config))
+
+	router.GET("/tasks", handler.GetTaskHandler)
+	router.POST("/tasks", handler.CreateTaskHandler)
 }
