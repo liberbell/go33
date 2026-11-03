@@ -18,4 +18,7 @@ func (handler *Handler) CreateTaskHandler(c *gin.Context) {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
+
+	createTask := handler.DB.CreateTask(task.Title, task.Description, task.Completed)
+	c.JSON(201, createTask)
 }
