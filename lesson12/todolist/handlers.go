@@ -1,6 +1,10 @@
 package todolist
 
-import "github.com/gin-gonic/gin"
+import (
+	"strconv"
+
+	"github.com/gin-gonic/gin"
+)
 
 type Handler struct {
 	Engine *gin.Engine
@@ -36,4 +40,9 @@ func (handler *Handler) UpdateTaskHandlr(c *gin.Context) {
 
 func (handler *Handler) DeleteTaskHandler(c *gin.Context) {
 	idStr := c.Param("id")
+	idInt, err := strconv.Atoi(idStr)
+	if err != nil {
+		c.JSON(400, gin.H{"error": "Invalid task ID"})
+		return
+	}
 }
