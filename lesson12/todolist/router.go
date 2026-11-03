@@ -9,4 +9,6 @@ func (handler *Handler) InitRouter() *gin.Engine {
 	router := gin.Default()
 
 	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
+	config.AllowMethods = []string{"GET", "PUT", "POST", "DELETE"}
 }
