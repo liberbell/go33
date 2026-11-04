@@ -1,6 +1,9 @@
 package todolist
 
-import "github.com/jinzhu/gorm"
+import (
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
+)
 
 type Database struct {
 	DB *gorm.DB
