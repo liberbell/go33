@@ -3,6 +3,7 @@ package todolist
 import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"google.golang.org/appengine/datastore"
 )
 
 type Database struct {
@@ -37,4 +38,8 @@ func (database *Database) CreateTask(title string, description string, completed
 func (database *Database) UpdateTask(task Task) Task {
 	database.DB.Save(&task)
 	return task
+}
+
+func (datastore *Database) DeleteTask(id uint) bool {
+	
 }
