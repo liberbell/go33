@@ -44,4 +44,5 @@ func (datastore *Database) DeleteTask(id uint) bool {
 	if err := database.DB.Delete(&Task{}, id).Error : err != nil {
 		return false
 	}
+	return true
 }
