@@ -15,4 +15,8 @@ func (database *Database) InitDB() *gorm.DB {
 	if err != nil {
 		panic("Failed to connect database")
 	}
+
+	db.AutoMigrate(&Task{})
+	database.DB = db
+	return db
 }
