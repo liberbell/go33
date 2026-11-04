@@ -27,3 +27,9 @@ func (database *Database) InitDB() *gorm.DB {
 func (database *Database) CloseDB() {
 	database.DB.Close()
 }
+
+func (Database *Database) CreateTask(title string, description string, completed bool) Task {
+	task := Task(Title: title, Description: description, Completed: completed)
+	database.DB.Create(&task)
+	return task
+}
