@@ -23,3 +23,7 @@ func (database *Database) InitDB() *gorm.DB {
 	database.DB = db
 	return db
 }
+
+func (database *Database) CloseDB() {
+	database.DB.Close()
+}
