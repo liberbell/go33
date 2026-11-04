@@ -46,3 +46,9 @@ func (datastore *Database) DeleteTask(id uint) bool {
 	}
 	return true
 }
+
+func (database *Database) GetTasks() []Task {
+	var tasks []Task
+	database.DB.Find(&tasks)
+	return tasks
+}
