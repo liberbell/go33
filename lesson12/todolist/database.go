@@ -41,5 +41,7 @@ func (database *Database) UpdateTask(task Task) Task {
 }
 
 func (datastore *Database) DeleteTask(id uint) bool {
-	
+	if err := database.DB.Delete(&Task{}, id).Error : err != nil {
+		return false
+	}
 }
