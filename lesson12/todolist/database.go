@@ -9,7 +9,7 @@ type Database struct {
 	DB *gorm.DB
 }
 
-func NewDatabse() *Database {
+func NewDatabase() *Database {
 	return &Database{}
 }
 
