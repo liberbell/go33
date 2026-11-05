@@ -27,14 +27,14 @@ func (handler *Handler) CreateTaskHandler(c *gin.Context) {
 	c.JSON(201, createTask)
 }
 
-func (handler *Handler) UpdateTaskHandlr(c *gin.Context) {
+func (handler *Handler) UpdateTaskHandler(c *gin.Context) {
 	var task Task
 	if err := c.ShouldBindJSON(&task); err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
 
-	updatedTask := handler.DB.UptateTask(task)
+	updatedTask := handler.DB.UpdateTask(task)
 	c.JSON(200, updatedTask)
 }
 
