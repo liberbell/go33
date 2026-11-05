@@ -16,7 +16,7 @@ func NewDatabase() *Database {
 }
 
 func (database *Database) InitDB() *gorm.DB {
-	db, err := gorm.Open("mysql", "user01:password@tcp(localhost:3306)/mak?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "user01:password@tcp(localhost:3306)/msk?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		fmt.Println(err)
 		panic("Failed to connect database")
