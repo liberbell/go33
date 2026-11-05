@@ -15,7 +15,7 @@ func (handler *Handler) InitRouter() *gin.Engine {
 
 	router.Use(cors.New(config))
 
-	router.GET("/tasks", handler.GetTaskHandler)
+	router.GET("/tasks", handler.GetTasksHandler)
 	router.POST("/tasks", handler.CreateTaskHandler)
 	router.PUT("/tasks/:id", handler.UpdateTaskHandler)
 	router.DELETE("/tasks/:id", handler.DeleteTaskHandler)
