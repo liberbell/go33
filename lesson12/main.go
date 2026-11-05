@@ -3,7 +3,7 @@ package main
 import "todolist/todolist"
 
 func main() {
-	db := todolist.NewDatabse()
+	db := todolist.NewDatabase()
 	db.InitDB()
 	defer db.CloseDB()
 
